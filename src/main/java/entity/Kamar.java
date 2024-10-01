@@ -26,6 +26,7 @@ public class Kamar {
     private List<Mahasiswa> listMahasiswa;
 
 
+
     public String getId() {
         return id;
     }
@@ -48,6 +49,14 @@ public class Kamar {
 
     public void setKapasitas(int kapasitas) {
         this.kapasitas = kapasitas;
+    }
+
+    public void setListMahasiswa(List<Mahasiswa> listMahasiswa) {
+        this.listMahasiswa = listMahasiswa;
+    }
+
+    public List<Mahasiswa> getListMahasiswa() {
+        return listMahasiswa;
     }
 }
 
