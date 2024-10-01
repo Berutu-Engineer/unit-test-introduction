@@ -28,7 +28,7 @@ public class MahasiswaRepositoryTest {
         mahasiswa.setNama("Joko");
         mahasiswa.setNim("123456789");
         mahasiswa.setJenisKelamin("Aspa");
-        mahasiswaRepository.addMahasiswsa(mahasiswa);
+        mahasiswaRepository.addMahasiswa(mahasiswa);
 
         Assertions.assertNotNull(MahasiswaRepository.getMahasiswaByIdMahasiswa("Mahasiswa-01"));
         Assertions.assertEquals("Mahasiswa-01", mahasiswa.getId());
