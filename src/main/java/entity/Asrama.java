@@ -3,6 +3,7 @@
  */
 package entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,6 +27,7 @@ public class Asrama {
         this.jumlahKamar = jumlahKamar;
         this.jenis = jenis;
         this.lokasi = lokasi;
+        this.listKamar = new ArrayList<>();
     }
 
     private List<Kamar> listKamar;
