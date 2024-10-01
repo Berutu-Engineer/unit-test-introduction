@@ -4,6 +4,7 @@
 package service;
 
 import entity.Asrama;
+import entity.Kamar;
 import repository.AsramaRepository;
 
 /**
@@ -29,5 +30,14 @@ public class AsramaService {
         }
 
         return "Asrama-0" + String.valueOf(AsramaRepository.getAllAsrama().size() + 1);
+    }
+
+    public static boolean tambahKamarKeAsrama(String asramaId, Kamar kamar) {
+        Asrama asrama = AsramaRepository.getAsramaByIdAsrama(asramaId);
+        if (asrama == null) {
+            System.out.println("Asrama tidak ditemukan.");
+            return false;
+        }
+        return AsramaRepository.addKamarToAsrama(asramaId, kamar);
     }
 }
