@@ -4,10 +4,12 @@
 package repository;
 
 import entity.Asrama;
+import entity.Kamar;
 import entity.Mahasiswa;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author Yosepri Disyandro Berutu (yosepri.berutu@binus.ac.id)
@@ -42,4 +44,26 @@ public class AsramaRepository {
         listAsrama = null;
     }
 
+    public static boolean addKamarToAsrama(String asramaId, Kamar kamar) {
+        Asrama asrama = AsramaRepository.getAsramaByIdAsrama(asramaId);
+
+        if (asrama.getListKamar() == null) {
+            asrama.setListKamar(new ArrayList<>()); // Inisialisasi jika null
+        }
+
+        if (asrama != null) {
+            if (asrama.getListKamar().size() < asrama.getJumlahKamar()) {
+                asrama.getListKamar().add(kamar);
+                return true;
+            } else {
+                System.out.println("Asrama sudah penuh.");
+            }
+        } else {
+            System.out.println("Asrama tidak ditemukan.");
+        }
+
+
+
+        return false;
+    }
 }
