@@ -23,4 +23,8 @@ public class KamarService {
 
         return "Kamar-0" + String.valueOf(KamarRepository.getAllKamar().size() + 1);
     }
+
+    public void getAllKamar() {
+        KamarRepository.getAllKamar();
+    }
 }
